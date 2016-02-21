@@ -14,6 +14,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
 	</head>
 
 	<body>
@@ -55,9 +56,6 @@
 								<div class="inner">
 									<h2>Benefits</h2>
 									<p>Those who use sign language to communicate can break the language barrier and make progress toward a life without complications in such a crucial component: speech. The program allows for users to not cut out the sign language process but rather preserve it and present a solution to communicate to all with it.<p>
-									<!-- <ul class="actions">
-										<li><a href="#" class="button">Bullshit Button</a></li>
-									</ul> -->
 								</div>
 							</div>
 						</section>
@@ -67,9 +65,6 @@
 								<div class="inner">
 									<h2>Future</h2>
 									<p>Transfer of the gesture-to-language program to a on-the-go app can make this a mobile and easy solution for communication. Pair that with a slimmer glove sleeve with integrated sensors can make life that much smoother for users.</p>
-									<!-- <ul class="actions">
-										<li><a href="#" class="button">Another Bullshit Button</a></li>
-									</ul> -->
 								</div>
 							</div>
 						</section>
@@ -79,9 +74,6 @@
 								<div class="inner">
 									<h2>Hardware</h2>
 									<p>Included in the system is the myo armband to push emerging technology to new levels, bringing aid to people that would otherwise lack such a trivial thing without it.</p>
-									<!-- <ul class="actions">
-										<li><a href="#" class="button">A Fucking 'Nother Bullshit Button!</a></li>
-									</ul> -->
 								</div>
 							</div>
 						</section>
@@ -91,38 +83,28 @@
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>Data Center</h2>
-							<p>Hover over the tile to understand a little more about the importance of the feedback.</p>
+							<p></p>
 							<div class="features">
 								<section>
-									<span class="icon major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<div id="display_fire"></div>
+									<script>
+									$(document).ready(function(){
+										var Firebase = require("firebase");
+										var myFirebaseRef = new Firebase("https://blinding-torch-3211.firebaseio.com/");
+										myFirebaseRef.child("location/city").on("value", function(snapshot) {
+											$("#display_fire").html(snapshot.val());
+										});
+									responsiveVoice.speak();
+									});
+									
+									</script>
+									<h3>Gesture</h3>
+									<
 								</section>
 								<section>
-									<span class="icon major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<p></p>
 								</section>
-								<section>
-									<span class="icon major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-chain"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
+								<iframe width="100%" height="800px" src="http://diagnostics.myo.com/"></iframe>
 							</div>
 							<!-- <ul class="actions">
 								<li><a href="#" class="button">Learn more</a></li>
@@ -133,55 +115,16 @@
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						 <div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<h2>Give Us Feedback!</h2>
+							<p>Let us know what you think of the prototype and how you think it can be improved!</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
-										<div class="field half first">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="5"></textarea>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
+									<p></p>
+									<p>Feel free to email me at kssargen@mtu.edu</p>
+									<p></p>
 								</section>
 								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
+
 								</section>
 							</div>
 						</div> 
